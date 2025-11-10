@@ -80,8 +80,9 @@ This command:
 
 ### Configuration & Troubleshooting
 
-- **Training Parameters**: Defaults from Eval Protocol are used (batch size, epochs, learning rate, etc.). For full RFT flag options, see the Fireworks docs.
-- **Changing Evaluators**: If you modify `evaluation.py` and want to re-upload:
+**Training Parameters**: We use Eval Protocol's default values for training parameters (batch size, epochs, learning rate, LoRA rank, accelerator count, etc.). For a complete list of available RFT flags you can customize, see [Fireworks RFT Command Documentation](https://docs.fireworks.ai/tools-sdks/firectl/commands/create-reinforcement-fine-tuning-job).
+
+**Changing Evaluators**: If you've made changes to your evaluator code and want to upload a new version:
 
 ```bash
 eval-protocol create rft \
