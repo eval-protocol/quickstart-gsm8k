@@ -211,7 +211,7 @@ Prepared RFT job for evaluator 'evaluation-gsm8k-example' using dataset 'evaluat
 
 ## How It Works
 
-- **Rollout**: For each dataset row, `SingleTurnRolloutProcessor` calls the model once and appends the assistant message to `row.messages`.
+- **Rollout**: For each dataset row, `SingleTurnRolloutProcessor` calls the model once and appends the assistant message to `row.messages`. To learn more, see the [Eval Protocol docs](https://evalprotocol.io/reference/rollout-processors#singleturnrolloutprocessor).
 - **Evaluation**: We parse the last assistant message, extract the first digit sequence inside `<answer>...</answer>`, and compare against the ground truth’s `<answer>...</answer>` digits.
 - **Score**: Exact match yields `1.0`, otherwise `0.0`.
 
@@ -226,18 +226,4 @@ When your evaluation or training is running, use the local UI to explore:
 ## Contact Us / Learn More
 - **Discord**: `https://discord.gg/mMqQxvFD9A` (join the `#eval-protocol` channel)
 - **Eval Protocol Docs**: `https://evalprotocol.io/introduction`
-- **Remote Rollout Processor Tutorial**: `https://evalprotocol.io/tutorial/remote-rollout-processor`
 - **Fireworks AI Platform**: `https://fireworks.ai`
-
-## Appendix
-
-### Dataset
-
-This repo includes a trimmed `gsm8k_sample.jsonl`. The evaluation references it directly:
-```
-input_dataset=[<repo>/gsm8k_sample.jsonl]
-```
-
-### Notes on Environment and Tools
-
-- The evaluation relies on the Eval Protocol pytest plugin; running `pytest` after installation will auto-load it.
