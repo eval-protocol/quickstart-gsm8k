@@ -1,15 +1,6 @@
-<h1 align="center">Fine Tuning a GSM8K Evaluator with Eval Protocol!</h1>
+## Fine Tuning a GSM8K Evaluator with Eval Protocol
 
-<p align="center">
-  Evaluate and train math reasoning models against GSM8K-style prompts using Eval Protocol.
-  This repo shows a minimal, working setup you can run locally and then scale to Reinforcement Fine Tuning (RFT).
- </p>
-
-<br/>
-
-## Introduction
-
-This repo demonstrates evaluating GSM8K-style math answers and optionally kicking off RFT, with the parts:
+Evaluate and train math reasoning models against GSM8K-style prompts using Eval Protocol. This repository provides a minimal, working setup you can run locally and then scale to Reinforcement Fine Tuning (RFT). It evaluates GSM8K-style math answers and can optionally kick off RFT. The main components are:
 
 - **Eval Protocol** - Orchestrates rollout execution, local UI, evaluator packaging, and RFT launcher
 - **SingleTurnRolloutProcessor** - Performs a single LiteLLM completion per row
