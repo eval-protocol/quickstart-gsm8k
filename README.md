@@ -51,6 +51,8 @@ python evaluation.py
 You should see a run that completes and opens a local dashboard on `http://localhost:8000`. A typical run looks like:
 
 ```
+INFO:evaluation:I am beginning to execute GSM8k rollout: early-health-03
+INFO:evaluation:I am done executing GSM8k rollout: early-health-03
 Runs (Parallel): 100%|██████████████████████████████████████████████████████████████| 1/1 [00:03<00:00,  3.16s/run]
 PASSED
 ================================================================================
